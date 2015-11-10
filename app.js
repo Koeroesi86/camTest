@@ -177,6 +177,9 @@
         if (!favs) {
             favs = [];
         }
+
+        if(!target.hasClass('favicon')) return;
+
         var nick = target.attr('data-nick');
         if (target.hasClass('added')) {
             target.removeClass('added');
