@@ -205,6 +205,8 @@
         var favs = getFavLS();
         if (favs.length) {
             $.each(favs, function (index, value) {
+                if(value==null || value=='null') return true;
+
                 if (_firstRun) {
                     var _ref = new Firebase('https://blazing-heat-28.firebaseio.com/' + value);
                     _ref.transaction(incrementDataRefValue);
