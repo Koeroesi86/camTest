@@ -1,3 +1,7 @@
+body {
+    padding-right: 185px;
+}
+
 .enlarge-it {
     padding:10px;
     background:green;
@@ -25,12 +29,13 @@
     position: absolute;
     left: 10px;
     top: 10px;
-    background: url(fav.png) no-repeat left top;
+    font-size: 20px;
     cursor: pointer;
+    color: rgba(208, 23, 23, 0.89);
 }
 
 .favicon.added {
-    background: url(fav.png) no-repeat right top;
+
 }
 
 .controls {

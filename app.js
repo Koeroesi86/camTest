@@ -206,7 +206,9 @@
                     var _ref = new Firebase('https://blazing-heat-28.firebaseio.com/' + value);
                     _ref.transaction(incrementDataRefValue);
                 }
-                $('div[data-nick="' + value + '"').addClass('added');
+                $('div[data-nick="' + value + '"')
+                    .addClass('added')
+                    .addClass('fa-heart').removeClass('fa-heart-o');
                 var ip = $('input[name="ip"]').val();
                 $('ul.favlist').append('<li class="favbtn" data-nick="' + value + '"><a href="?nickname=' + value + '&ip=' + ip + '">' + value + '</a><span class="remove">&#0215;</span></li>');
             });
