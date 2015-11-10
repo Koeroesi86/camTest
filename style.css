@@ -2,6 +2,10 @@ body {
     padding-right: 185px;
 }
 
+br {
+    display: none;
+}
+
 form[name="search_form"] tr {
     display: block;
 }
@@ -16,6 +20,11 @@ form[name="search_form"] tr::after {
 
 form[name="search_form"] td {
     display: block;
+    width: 100%;
+    max-width: 100%;
+    clear: both;
+    float: none;
+    box-sizing: border-box;
 }
 
 .enlarge-it {
