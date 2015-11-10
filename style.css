@@ -91,3 +91,12 @@ span.remove {
 span.remove:hover {
     color: red;
 }
+
+body {
+    margin-right: 185px;
+}
+
+.favbtn a {
+    display: block;
+    width: 100%;
+}

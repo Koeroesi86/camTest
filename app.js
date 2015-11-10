@@ -44,6 +44,7 @@ var mute_unmute = function(method, obj) {
 
 var injectCSS = function() {
     var cssurl = 'http://datapoint.hu/6cams/sixcams.css?v=3a';
+    cssurl = 'https://raw.githubusercontent.com/Koeroesi86/camTest/master/style.css';
     $('head').append('<link href="' + cssurl + '" rel="stylesheet" type="text/css">');
 };
 
