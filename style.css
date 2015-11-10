@@ -2,11 +2,11 @@ body {
     padding-right: 185px;
 }
 
-tr {
+form[name="search_form"] tr {
     display: block;
 }
 
-tr::after {
+form[name="search_form"] tr::after {
     content: '';
     display: block;
     width: 100%;
@@ -14,7 +14,7 @@ tr::after {
     clear: both;
 }
 
-td {
+form[name="search_form"] td {
     display: block;
 }
 
