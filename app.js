@@ -180,11 +180,11 @@
         var nick = target.attr('data-nick');
         if (target.hasClass('added')) {
             target.removeClass('added');
-            target.removeClass('fa-heart').addClass('fa-heart-o');
+            target.find('.fa').removeClass('fa-heart').addClass('fa-heart-o');
             removeFav(nick);
         } else {
             target.addClass('added');
-            target.addClass('fa-heart').removeClass('fa-heart-o');
+            target.find('.fa').addClass('fa-heart').removeClass('fa-heart-o');
             addFav(nick);
         }
     };
@@ -208,7 +208,7 @@
                 }
                 $('div[data-nick="' + value + '"')
                     .addClass('added')
-                    .addClass('fa-heart').removeClass('fa-heart-o');
+                    .find('.fa').addClass('fa-heart').removeClass('fa-heart-o');
                 var ip = $('input[name="ip"]').val();
                 $('ul.favlist').append('<li class="favbtn" data-nick="' + value + '"><a href="?nickname=' + value + '&ip=' + ip + '">' + value + '</a><span class="remove">&#0215;</span></li>');
             });
