@@ -95,7 +95,7 @@
             });
 
             var mask = streamContainer.find('.mask');
-            mask.append('<div class="favicon" data-nick="' + nick + '"><i class="fa fa-star-o"></i></div>');
+            mask.append('<div class="favicon" data-nick="' + nick + '"><i class="fa fa-heart-o"></i></div>');
 
             var favicon = mask.find('.favicon');
 
