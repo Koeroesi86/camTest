@@ -95,7 +95,7 @@
             });
 
             var mask = streamContainer.find('.mask');
-            mask.append('<div class="favicon" data-nick="' + nick + '"></div>');
+            mask.append('<div class="favicon" data-nick="' + nick + '"><i class="fa fa-star-o"></i></div>');
 
             var favicon = mask.find('.favicon');
 
@@ -160,7 +160,9 @@
             favs.splice(index, 1);
             favs = JSON.stringify(favs);
             localStorage.setItem('myfavs', favs);
-            $('.favicon[data-nick="' + nick + '"]').removeClass('added');
+            $('.favicon[data-nick="' + nick + '"]')
+                .removeClass('added')
+                .find('.fa').removeClass('fa-heart fa-heart-o');
             $('.favbtn[data-nick="' + nick + '"]').remove();
             var _ref = new Firebase('https://blazing-heat-28.firebaseio.com/' + nick);
             _ref.transaction(decrementDataRefValue);
@@ -178,9 +180,11 @@
         var nick = target.attr('data-nick');
         if (target.hasClass('added')) {
             target.removeClass('added');
+            target.removeClass('fa-heart').addClass('fa-heart-o');
             removeFav(nick);
         } else {
             target.addClass('added');
+            target.addClass('fa-heart').removeClass('fa-heart-o');
             addFav(nick);
         }
     };
