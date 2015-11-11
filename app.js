@@ -11,6 +11,12 @@ var enlargeObject = function(obj) {
         width: 1024,
         height: 768
     });
+
+    var fv = getJsonFromFlashVars(getFlashVars(obj));
+
+    fv.hd = "true";
+
+    setFlashVars(obj, serializeObj(fv));
 };
 
 var injectFireBase = function() {
